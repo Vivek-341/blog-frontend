@@ -1,0 +1,115 @@
+.logincontainer{
+    background-image:-webkit-radial-gradient(circle, #f9406b, #b914c5, #404ccc);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: infinite 10s linear;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    width: 400px;
+}
+.username{
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:20px;
+    color: black;
+    filter: blur(0.2px);
+}
+.email{
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:20px;
+    color: black;
+    filter: blur(0.2px);
+}
+.password{
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:20px;
+    color: black;
+    filter: blur(0.2px);
+}
+.login{
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    filter: blur(0.2px);
+}
+.login:hover{
+    background-color: peachpuff;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    filter: blur(0.2px);
+    transition: 0.3s;
+}
+.register{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:20px;
+    color: black;
+    filter: blur(0.2px);
+    text-decoration: none;
+}
+.register:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size:20px;
+    color: lab(0, 0, 0);
+    filter: blur(0.2px);
+    text-decoration: none;
+}
+.error{
+    color: red;
+}

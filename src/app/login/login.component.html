@@ -1,0 +1,39 @@
+<div class="logincontainer">
+    <form class="form" [formGroup]="loginForm">
+        <p class="title">LOGIN</p>
+        <input type="text" id="username" placeholder="Username" class="username" formControlName="userName">
+        <ng-container>
+            <div *ngIf="loginForm.get('userName')?.invalid && (loginForm.get('userName')?.dirty || loginForm.get('userName')?.touched)">
+                <div *ngIf="loginForm.get('userName')?.errors?.['required']" class="error">
+                    Username is required
+                </div>
+            </div>
+
+            <div *ngIf="loginForm.get('userName')?.invalid && (loginForm.get('userName')?.dirty || loginForm.get('userName')?.touched)">
+                <div *ngIf="loginForm.get('userName')?.errors?.['minlength']" class="error">
+                    Username must be at least 3 characters
+                </div>
+            </div>
+        </ng-container>
+        <br>
+        <input type="password" id="password" placeholder="password"  class="password" formControlName="password">
+        <ng-container>
+            <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                <div *ngIf="loginForm.get('password')?.errors?.['required']" class="error">
+                    password is required
+                </div>
+            </div>
+
+            <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                <div *ngIf="loginForm.get('password')?.errors?.['minlength']" class="error">
+                    password must be at least 3 characters
+                </div> 
+            </div>
+        </ng-container>
+        <br>
+        <button type="submit" (click)="login()" [routerLink]="['/']" class="login">Login</button>
+        <br>
+        <a [routerLink]="['/signup']" class="register">Don't have an account? Register</a>
+    </form>
+    
+</div>

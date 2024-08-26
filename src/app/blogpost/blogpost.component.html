@@ -1,0 +1,25 @@
+<div class="blogpost">
+    <div class="form" [formGroup]="viewForm">
+        <p class="title">{{post[0].title}}</p><hr style="border: 3px solid black; width: 100vw;">
+        <p class="content">{{post[0].content}}</p><br>
+        <br><hr style="border: 20px solid black; width: 100vw;">
+        <div>
+            <button [routerLink]="['/blog']" class="submit">Back</button>&nbsp;&nbsp;<button [routerLink]="['/comment']" class="submit">Comment</button>
+        </div>
+        <div>
+            <p style="font-size: medium; font-weight: bolder">UserID</p>
+            <textarea name="Comment" class="comment"></textarea>
+        </div>
+        <div><button class="submit" (click)="submit()">Submit</button></div>
+        <br>
+        <div *ngFor="let comment of comments" class="commentsbox">
+            <div class="comments">
+                <p>{{comment.create_by}} &nbsp;&nbsp;{{comment.modified_date}}</p>
+                <p>{{comment.description}}</p>
+                
+            </div>
+            <button (click)="delete(comment.id)" class="delete">Delete</button>
+        </div>
+        
+    </div>
+</div>

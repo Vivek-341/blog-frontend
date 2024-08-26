@@ -1,0 +1,115 @@
+.blogpost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+    background-image: linear-gradient(to right, #cc40a4 0%, #c51437 100%);
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    filter: contrast(1.5);
+}
+.title{
+    width: auto;
+    height: 50px;
+    border: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:50px;
+    color: black;
+    filter: blur(0.2px);
+    background-color: transparent;
+}
+.content{
+    width: 80vw;
+    height:auto;
+    border: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    font-size: 26px;
+}
+.submit{
+    width: 10vw;
+    height: 50px;
+    border: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+    filter: blur(0.2px);
+    background-color: black;
+    cursor: pointer;
+}
+.comment{
+    width: 50vw;
+    height: 5vw;
+    border: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    filter: blur(0.2px);
+    resize: none;
+}
+.comments{
+    height: 10vh;
+    width: 80vw;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    filter: blur(0.2px);
+    background-color: white;
+}
+.delete{
+    width: 10vw;
+    height: 50px;
+    border: transparent;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+    filter: blur(0.2px);
+    background-color: black;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.delete:hover{
+    background-color: red;
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+.commentsbox{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.255);
+    
+}

@@ -1,0 +1,14 @@
+<div class="signupcontainer">
+    <form class="form" [formGroup]="signupForm">
+        <p class="title">SIGN UP</p>
+        <input type="text"  placeholder="Username" class="username" formControlName="userName">
+        <br>
+        <input type="email" placeholder="Email"  class="email" formControlName="email">
+        <br>
+        <input type="password"  placeholder="Password"  class="password" formControlName="password">
+        <br>
+        <button (click)="register()" [routerLink]="['/']" class="register">Register</button>
+        <br>
+        <a [routerLink]="['/login']" class="login">Already have an account? Login</a>
+    </form>
+</div>

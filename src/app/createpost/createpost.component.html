@@ -1,0 +1,8 @@
+<div class="createpost">
+    <form [formGroup]="createForm" class="form">
+        <input type="text" placeholder="Title" formControlName="title" name="title" class="title">
+        <br>
+        <textarea id="content" cols="30" rows="10" placeholder="Description" formControlName="content" name="content" class="content"></textarea><br>
+        <button type="button" (click)="submit()" [routerLink]="['/blog']" class="submit">Submit</button>
+    </form>
+</div>
