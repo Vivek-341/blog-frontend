@@ -1,0 +1,35 @@
+.about{
+    background-image: linear-gradient(yellow,green, yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw
+}
+.aboutimage{
+    background-image:url(../../Blogify.jpeg);
+    background-size:cover;
+    background-repeat:round;
+    height: 100vh;
+    width: 50vw;
+    border-radius: 10px;
+    margin: 10px;
+}
+.aboutcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50vw;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: burlywood;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+.abouttext{
+    font-size: 18px;
+}
