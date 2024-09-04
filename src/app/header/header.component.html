@@ -5,8 +5,11 @@
     <a class="pages" [routerLink]="['/blog']">BLOG</a>
     <!-- <button class="createpost" [routerLink]="['/createpost']">Create Post</button>
     <a class="pages" [routerLink]="['/createpost']">Create Post</a> -->
-    <a class="pages" [routerLink]="['/login']">LOGIN</a>
-    <a class="pages" [routerLink]="['/signup']">SIGNUP</a>
+    <a class="pages" [routerLink]="['/login']" *ngIf="!userName">LOGIN</a>
+    <a class="pages" [routerLink]="['/signup']" *ngIf="!userName">SIGNUP</a>
+    <a class="pages" (click)="logout()" *ngIf="userName">LOGOUT</a>
+    <a class="pages" [routerLink]="['/profile']" *ngIf="userName">PROFILE</a>
+    <span *ngIf="userName">Welcome {{userName}}</span>
+
 </div>
 
-<router-outlet></router-outlet>

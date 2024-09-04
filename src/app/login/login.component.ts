@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,11 +14,17 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent {
   title = 'Login';
-  constructor(private logindata: FormBuilder,private loginservice: LoginService) { }
+  constructor(private logindata: FormBuilder,private loginservice: LoginService,private router:Router) { }
   loginForm = this.logindata.group({
     userName: ['',[Validators.required, Validators.minLength(3),Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
     password: ['',[Validators.required, Validators.minLength(3),Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
   })
+
+  ngOnInit() {
+    if (localStorage.getItem('userName')) {
+      this.router.navigate(['/home']);
+    }
+  }
 
   login() {
     this.loginservice.login(this.loginForm.value);

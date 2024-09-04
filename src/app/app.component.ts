@@ -13,4 +13,12 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'blog-frontend';
+  
+  constructor() {
+    console.log("This is from app component");
+  }
+
+  ngOnInit(){
+    console.log("I am app component");
+  }
 }
