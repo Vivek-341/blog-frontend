@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  goHome() {
+    window.location.href = '/';
+  }
+
 }
