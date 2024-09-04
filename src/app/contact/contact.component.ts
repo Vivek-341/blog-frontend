@@ -9,4 +9,19 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  openFacebook() {
+    window.open('https://www.facebook.com/', '_blank');
+  }
+
+  openTwitter() {
+    window.open('https://twitter.com/', '_blank');
+  }
+
+  openInstagram() {
+    window.open('https://www.instagram.com/', '_blank');
+  }
+
+  openWhatsapp() {
+    window.open('https://web.whatsapp.com/', '_blank');
+  }
 }
