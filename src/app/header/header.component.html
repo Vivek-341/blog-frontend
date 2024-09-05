@@ -9,7 +9,7 @@
     <a class="pages" [routerLink]="['/signup']" *ngIf="!userName">SIGNUP</a>
     <a class="pages" (click)="logout()" *ngIf="userName">LOGOUT</a>
     <a class="pages" [routerLink]="['/profile']" *ngIf="userName">PROFILE</a>
-    <span *ngIf="userName">Welcome {{userName}}</span>
+    <span class="username" *ngIf="userName">Welcome {{userName}}</span>
 
 </div>
 

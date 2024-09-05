@@ -35,6 +35,7 @@
     border-radius: 50px;
     transform: scale3d(1.3, 1.3, 1.3);
     text-shadow: 0px 0px 10px whitesmoke;
+    cursor: pointer;
 }
 .pages:active{
     background-color: white;
@@ -42,3 +43,45 @@
     transition: 0.25s;
     border-radius: 50px;
 }
+.username{
+    color:white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+    animation: colorchange 5s infinite;
+}
+@keyframes colorchange{
+    0%{
+        color: yellow;
+    }
+    25%{
+        color: orange;
+    }
+    50%{
+        color: white;
+    }
+    75%{
+        color: orange;
+    }
+    100%{
+        color: yellow;
+    }
+}
+.username:hover{
+    color: white;
+    transition: 0.3s;
+    border-radius: 50px;
+    transform: scale3d(1.3, 1.3, 1.3);
+    text-shadow: 0px 0px 10px whitesmoke;
+    cursor: pointer;
+}
+.username:active{
+    background-color: white;
+    color: black;
+    transition: 0.25s;
+    border-radius: 50px;
+}   
