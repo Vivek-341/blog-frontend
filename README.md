@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+### Angular CLI Commands
+
+* `ng new <project-name>`: Create a new Angular project
+* `ng g c <component-name>`: Generate a new Angular component
+* `ng g s <service-name>`: Generate a new Angular service
+* `ng g p <pipe-name>`: Generate a new Angular pipe
+* `ng g guard <guard-name>`: Generate a new Angular route guard
+* `ng g m <module-name>`: Generate a new Angular module
+* `ng g c <module-name>/<component-name>`: Generate a new Angular component within a module
