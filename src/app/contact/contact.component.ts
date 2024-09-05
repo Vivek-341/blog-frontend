@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { AfterheaderComponent } from '../afterheader/afterheader.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [AfterheaderComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

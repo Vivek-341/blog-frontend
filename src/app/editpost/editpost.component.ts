@@ -3,6 +3,7 @@ import { PostsService } from '../posts.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AfterheaderComponent } from '../afterheader/afterheader.component';
 
 interface post {
   id: number;
@@ -13,7 +14,7 @@ interface post {
 @Component({
   selector: 'app-editpost',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterModule,RouterOutlet,ReactiveFormsModule],
+  imports: [CommonModule,RouterLink,RouterModule,RouterOutlet,ReactiveFormsModule,AfterheaderComponent],
   templateUrl: './editpost.component.html',
   styleUrl: './editpost.component.css'
 })

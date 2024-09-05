@@ -5,6 +5,7 @@ import { PostsService } from '../posts.service';
 import { ActivatedRoute, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CommentsService } from '../comments.service';
+import { AfterheaderComponent } from '../afterheader/afterheader.component';
 
 interface post {
   id: number;
@@ -21,7 +22,7 @@ interface comment {
 @Component({
   selector: 'app-blogpost',
   standalone: true,
-  imports: [CommonModule,FormsModule,ReactiveFormsModule,RouterLink,RouterModule,RouterOutlet,NgForOf],
+  imports: [CommonModule,FormsModule,ReactiveFormsModule,RouterLink,RouterModule,RouterOutlet,NgForOf,AfterheaderComponent],
   templateUrl: './blogpost.component.html',
   styleUrl: './blogpost.component.css'
 })

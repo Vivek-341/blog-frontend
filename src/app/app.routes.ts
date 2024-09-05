@@ -13,7 +13,7 @@ import { BlogpostComponent } from './blogpost/blogpost.component';
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        component: LoginComponent
     },
     {
         path: 'home',

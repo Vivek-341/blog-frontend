@@ -3,6 +3,7 @@ import { PostsService } from '../posts.service';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
+import { AfterheaderComponent } from '../afterheader/afterheader.component';
 
 interface post {
   id: number;
@@ -13,7 +14,7 @@ interface post {
 @Component({
   selector: 'app-createpost',
   standalone: true,
-  imports: [CommonModule,FormsModule,RouterLink,RouterOutlet,ReactiveFormsModule],
+  imports: [CommonModule,FormsModule,RouterLink,RouterOutlet,ReactiveFormsModule,AfterheaderComponent],
   templateUrl: './createpost.component.html',
   styleUrl: './createpost.component.css'
 })

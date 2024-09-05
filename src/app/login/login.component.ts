@@ -20,14 +20,11 @@ export class LoginComponent {
     password: ['',[Validators.required, Validators.minLength(3),Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
   })
 
-  ngOnInit() {
-    if (localStorage.getItem('userName')) {
-      this.router.navigate(['/home']);
-    }
-  }
 
   login() {
     this.loginservice.login(this.loginForm.value);
+    this.router.navigate(['/home']);
+
   }
   
   

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { PostsService } from '../posts.service';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { CreatepostComponent } from '../createpost/createpost.component';
+import { AfterheaderComponent } from '../afterheader/afterheader.component';
 
 
 interface post {
@@ -15,7 +16,7 @@ interface post {
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule,FormsModule,RouterLink,RouterModule,RouterOutlet,CreatepostComponent],
+  imports: [CommonModule,FormsModule,RouterLink,RouterModule,RouterOutlet,CreatepostComponent,AfterheaderComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
