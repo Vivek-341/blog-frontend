@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { EditpostComponent } from './editpost/editpost.component';
 import { BlogpostComponent } from './blogpost/blogpost.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
     {
@@ -50,6 +51,10 @@ export const routes: Routes = [
     {
         path:'blogpost/:id',
         component:BlogpostComponent
+    },
+    {
+        path:'profile',
+        component:ProfileComponent
     },
     {
         path: '**',

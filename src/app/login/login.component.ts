@@ -19,9 +19,18 @@ export class LoginComponent {
     userName: ['',[Validators.required, Validators.minLength(3),Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
     password: ['',[Validators.required, Validators.minLength(3),Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
   })
-
+  validation() {
+    if (this.loginForm.value.userName == '' || this.loginForm.value.password == '') {
+      alert('Please enter username and password');
+      return false;
+    }
+    return true;
+  }
 
   login() {
+    if(!this.validation()){
+      return;
+    }
     this.loginservice.login(this.loginForm.value);
     this.router.navigate(['/home']);
 

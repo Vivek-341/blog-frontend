@@ -26,6 +26,7 @@ export class AfterheaderComponent {
     console.log("I am afterheader component ngOnInit" + this.userName);
   }
   logout(){
+    alert("Are you sure you want to logout?");
     localStorage.removeItem('userName');
     this.router.navigate(['/']);
 
