@@ -31,11 +31,15 @@ export class LoginComponent {
     if(!this.validation()){
       return;
     }
-    this.loginservice.login(this.loginForm.value);
-    this.router.navigate(['/home']);
+    this.loginservice.login(this.loginForm.value).subscribe((data:any) => {
+      console.log("Component",data);
+      if(data.length==0){
+        alert("Invalid username or password");
+      }else{
+        localStorage.setItem("userName",data[0].name);
+        this.router.navigate(['/home']);
+      }
 
+    });
   }
-  
-  
-
 }

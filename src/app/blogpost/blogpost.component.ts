@@ -61,7 +61,7 @@ export class BlogpostComponent {
 
   submit(){
     console.log(this.viewForm.value);
-    this.postsservice.add(this.viewForm.value)
+    this.commentservice.add(this.viewForm.value)
   }
 
   delete(id:any){

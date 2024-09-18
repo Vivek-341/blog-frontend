@@ -11,10 +11,11 @@ export class LoginService {
 
   login(user:any ) {
     const userJson = JSON.stringify(user);
-    this.httpClient.post('http://localhost:3030/login', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
-      console.log(data);
-      console.log(data[0].name)
-      localStorage.setItem("userName",data[0].name);
-    });
+    // this.httpClient.post('http://localhost:3030/login', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
+    //   console.log(data);
+    //   console.log(data[0].name)
+    //   localStorage.setItem("userName",data[0].name);
+    // });
+    return this.httpClient.post('http://localhost:3030/login', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})});
   }
 }

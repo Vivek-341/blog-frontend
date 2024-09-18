@@ -11,7 +11,7 @@ import { AfterheaderComponent } from '../afterheader/afterheader.component';
 export class AboutComponent {
 
   goHome() {
-    window.location.href = '/';
+    window.location.href = '/home';
   }
 
 }
