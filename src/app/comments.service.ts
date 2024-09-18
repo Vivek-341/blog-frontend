@@ -16,11 +16,14 @@ export class CommentsService {
   }
 
   add(comment:any ) {
-    const commentJson = JSON.stringify(comment);
-    console.log("this is comment" + commentJson);
-    this.httpClient.post('http://localhost:3030/thread', commentJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
-      console.log(data);
-    });
+    // const commentJson = JSON.stringify(comment);
+    // console.log("this is comment" + commentJson);
+    // this.httpClient.post('http://localhost:3030/thread', commentJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
+    //   console.log(data);
+    // });
+
+    return this.httpClient.post('http://localhost:3030/thread', comment);
+    
   }
 
   delete(id: any) {
