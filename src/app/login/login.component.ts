@@ -36,7 +36,8 @@ export class LoginComponent {
       if(data.length==0){
         alert("Invalid username or password");
       }else{
-        localStorage.setItem("userName",data[0].name);
+        console.log(data);
+        localStorage.setItem("userName",data[0].userName);
         this.router.navigate(['/home']);
       }
 
