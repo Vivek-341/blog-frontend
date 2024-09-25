@@ -5,22 +5,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommentsService {
-
   comments: any[] = [];
-
-  constructor(private httpClient: HttpClient) {}
-
+  constructor(private httpClient: HttpClient) { }
   getall(blogId: any) {
-
-    return this.httpClient.get('http://localhost:3030/thread/'+blogId);
+    return this.httpClient.get('http://localhost:3030/thread/' + blogId);
   }
 
-  add(comment:any ) {
+  add(comment: any) {
     return this.httpClient.post('http://localhost:3030/thread', comment);
-    
   }
 
   delete(id: any) {
-    return this.httpClient.delete('http://localhost:3030/thread/'+id);
+    return this.httpClient.delete('http://localhost:3030/thread/' + id);
   }
 }

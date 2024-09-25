@@ -14,10 +14,10 @@
             <th>Delete</th>
         </tr>
         <tr *ngFor="let post of posts">
-            <td [routerLink]="['/blogpost', post.id]" style="cursor: pointer">{{post.title}}</td>
-            <td [routerLink]="['/blogpost', post.id]" style="cursor: pointer">{{post.content}}</td>
+            <td [routerLink]="['/blogpost', post._id]" style="cursor: pointer" >{{post.title}}</td>
+            <td [routerLink]="['/blogpost', post._id]" style="cursor: pointer" >{{post.content}}</td>
             <td>
-                <button class="Btn" [routerLink]="['/editpost', post.id]" (click)="edit(post)">
+                <button class="Btn" [routerLink]="['/editpost', post._id]" (click)="edit(post)">
                     Edit
                     <svg viewBox="0 0 512 512" class="svg">
                       <path

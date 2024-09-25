@@ -8,7 +8,7 @@ import { AfterheaderComponent } from '../afterheader/afterheader.component';
 
 
 interface post {
-  id: number;
+  _id: number;
   title: string;
   content: string;
 }
@@ -28,12 +28,13 @@ export class BlogComponent {
     this.postsService.getAll().subscribe((data:any) => {
       this.posts = data;
       console.log(this.posts);
+      console.log(data[0]._id);
     })
   }
   
 
   deletePost(post: post) {
-    this.postsService.delete(post.id).subscribe();
+    this.postsService.delete(post._id).subscribe();
     this.posts = this.posts.filter(p => p !== post);
   }
 

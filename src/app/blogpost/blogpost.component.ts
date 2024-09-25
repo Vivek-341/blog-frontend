@@ -34,6 +34,7 @@ export class BlogpostComponent {
   Content :string= '';
   post: post[] = [];
   comments:comment[]=[];
+  userName = localStorage.getItem('userName')?? '';
   
   constructor(private postsservice: PostsService,private fb: FormBuilder,private router:ActivatedRoute, private commentservice:CommentsService) {}
 
@@ -44,27 +45,38 @@ export class BlogpostComponent {
   
   ngOnInit() {
     let blogId=this.router.snapshot.params['id'];
+    console.log(blogId);
+    // this.postsservice.get(blogId).subscribe((data:any) => {
+    //   this.post = data;
+    //   this.title = this.post[0].title;
+    //   this.content = this.post[0].content;
+    //   // this.viewForm = this.fb.group({
+    //   //   title: [this.title, Validators.required],
+    //   //   content: [this.content, Validators.required],
+    //   // })
+    // })
     this.postsservice.get(blogId).subscribe((data:any) => {
-      this.post = data;
-      this.title = this.post[0].title;
-      this.content = this.post[0].content;
+      this.title = data.title;
+      this.content = data.content;
+      console.log(this.title);
+      console.log(this.content);
       this.viewForm = this.fb.group({
         title: [this.title, Validators.required],
         content: [this.content, Validators.required],
       })
     })
-    this.commentservice.getall(blogId).subscribe((data:any) => {
-      this.comments = data;
-      console.log(this.comments);
-    })
+    // this.commentservice.getall(blogId).subscribe((data:any) => {
+    //   this.comments = data;
+    //   console.log(this.comments);
+    // })
   }
 
-  submit(){
-    console.log(this.viewForm.value);
-    this.commentservice.add(this.viewForm.value)
-  }
+  // submit(){
+  //   console.log(this.viewForm.value);
+  //   this.commentservice.add(this.viewForm.value)
+  // }
 
-  delete(id:any){
-    this.commentservice.delete(id);
-  }
+  // delete(id:any){
+  //   this.commentservice.delete(id);
+  // }
 }

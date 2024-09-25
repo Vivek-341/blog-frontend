@@ -1,17 +1,17 @@
 <app-afterheader></app-afterheader>
 <div class="blogpost">
     <div class="form" [formGroup]="viewForm">
-        <p class="title">{{post[0].title}}</p><hr style="border: 3px solid black; width: 100vw;">
-        <p class="content">{{post[0].content}}</p><br>
+        <p class="title">{{title}}</p><hr style="border: 3px solid black; width: 100vw;">
+        <p class="content">{{content}}</p><br>
         <br><hr style="border: 20px solid black; width: 100vw;">
         <div>
             <button [routerLink]="['/blog']" class="submit">Back</button>&nbsp;&nbsp;<button [routerLink]="['/comment']" class="submit">Comment</button>
         </div>
         <div>
-            <p style="font-size: medium; font-weight: bolder">UserID</p>
+            <p style="font-size: medium; font-weight: bolder">{{userName}}</p>
             <textarea name="Comment" class="comment" placeholder="Comment" formControlName="comment"></textarea>
         </div>
-        <div><button class="submit" (click)="submit()">Submit</button></div>
+        <!-- <div><button class="submit" (click)="submit()">Submit</button></div>
         <br>
         <div *ngFor="let comment of comments" class="commentsbox">
             <div class="comments">
@@ -20,7 +20,7 @@
                 
             </div>
             <button (click)="delete(comment.id)" class="delete">Delete</button>
-        </div>
+        </div> -->
         
     </div>
 </div>
