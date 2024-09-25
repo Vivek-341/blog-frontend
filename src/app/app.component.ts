@@ -15,11 +15,9 @@ import { LoginComponent } from './login/login.component';
 export class AppComponent {
   title = 'blog-frontend';
   
-  constructor() {
-    console.log("This is from app component");
-  }
+  // constructor() {
+  // }
 
-  ngOnInit(){
-    console.log("I am app component");
-  }
+  // ngOnInit(){
+  // }
 }

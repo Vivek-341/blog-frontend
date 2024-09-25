@@ -13,8 +13,8 @@ interface post {
   content: string;
 }
 interface comment {
-  id: number;
-  description: string;
+  _id: number;
+  comments: string;
   modified_date: string;
   create_by: string;
 }
@@ -30,8 +30,6 @@ export class BlogpostComponent {
 
   title:string = '';
   content :string= '';
-  Title:string = '';
-  Content :string= '';
   post: post[] = [];
   comments:comment[]=[];
   userName = localStorage.getItem('userName')?? '';
@@ -42,10 +40,13 @@ export class BlogpostComponent {
     title: ['', Validators.required],
     content: ['', Validators.required],
   })
+
+  commentForm = this.fb.group({
+    comments: ['', Validators.required]
+  })
   
   ngOnInit() {
     let blogId=this.router.snapshot.params['id'];
-    console.log(blogId);
     // this.postsservice.get(blogId).subscribe((data:any) => {
     //   this.post = data;
     //   this.title = this.post[0].title;
@@ -58,25 +59,37 @@ export class BlogpostComponent {
     this.postsservice.get(blogId).subscribe((data:any) => {
       this.title = data.title;
       this.content = data.content;
-      console.log(this.title);
-      console.log(this.content);
       this.viewForm = this.fb.group({
         title: [this.title, Validators.required],
         content: [this.content, Validators.required],
       })
     })
-    // this.commentservice.getall(blogId).subscribe((data:any) => {
-    //   this.comments = data;
-    //   console.log(this.comments);
-    // })
+    this.commentservice.getall(blogId).subscribe((data:any) => {
+      console.log(data);
+      this.comments = data;
+      console.log(this.comments)
+      console.log(this.comments[0].comments);
+      console.log(this.comments[0]._id);
+      
+
+      // this.comments = data;
+      // this.comment=data.comments;
+      // this.commentForm = this.fb.group({
+      //   comment: [this.comment, Validators.required]
+      // })
+      // console.log(this.comments);
+    })
   }
 
-  // submit(){
-  //   console.log(this.viewForm.value);
-  //   this.commentservice.add(this.viewForm.value)
-  // }
+  submit(){
 
-  // delete(id:any){
-  //   this.commentservice.delete(id);
-  // }
+  }
+
+  delete(id:any){
+    console.log(id);
+    this.commentservice.delete(id).subscribe((data:any) => {
+      console.log(data);
+    });
+  }
+  
 }

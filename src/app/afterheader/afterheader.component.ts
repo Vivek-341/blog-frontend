@@ -18,12 +18,10 @@ export class AfterheaderComponent {
 
   constructor(private router:Router) {
     this.userName = localStorage.getItem('userName')?? '';
-    console.log("I am afterheader component constructor" + this.userName);
   }
 
   ngOnInit(){
     this.userName = localStorage.getItem('userName')?? '';
-    console.log("I am afterheader component ngOnInit" + this.userName);
   }
   logout(){
     let text = 'Are you sure you want to logout?';

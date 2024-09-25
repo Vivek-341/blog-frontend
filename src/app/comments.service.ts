@@ -16,6 +16,7 @@ export class CommentsService {
   }
 
   delete(id: any) {
+    console.log("this is id" + id);
     return this.httpClient.delete('http://localhost:3030/thread/' + id);
   }
 }

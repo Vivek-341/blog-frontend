@@ -35,7 +35,7 @@ export class CreatepostComponent {
 
   submit() {
     console.log(this.createForm.value);
-    this.postsService.add(this.createForm.value)
+    this.postsService.add(this.createForm.value);
   }
 
 }

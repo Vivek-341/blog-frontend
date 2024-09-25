@@ -29,24 +29,33 @@ export class EditpostComponent {
   constructor(private postsservice: PostsService,private fb: FormBuilder,private router:ActivatedRoute) {}
 
   editForm = this.fb.group({
-    id: [-1, Validators.required],
+    _id: [-1, Validators.required],
     title: ['', Validators.required],
     content: ['', Validators.required],
   })
   
   ngOnInit() {
-    this.postsservice.get(this.router.snapshot.params['id']).subscribe((data:any) => {
-      this.post = data;
-      this.title = this.post[0].title;
-      this.content = this.post[0].content;
-      console.log(this.title);
-      console.log(this.content);
-      console.log("THis is from edit post",this.post);
-      console.log(this.postsservice.get(this.router.snapshot.params['id']))
+    // this.postsservice.get(this.router.snapshot.params['id']).subscribe((data:any) => {
+    //   this.post = data;
+    //   console.log(this.data.title);
+    //   this.title = this.post[0].title;
+    //   this.content = this.post[0].content;
+    //   console.log(this.title);
+    //   console.log(this.content);
+    //   console.log("THis is from edit post",this.post);
+    //   console.log(this.postsservice.get(this.router.snapshot.params['id']))
+    //   this.editForm = this.fb.group({
+    //     id: [this.post[0].id, Validators.required],
+    //     title: [this.title, Validators.required],
+    //     content: [this.content, Validators.required],
+    //   })
+    // })
+    let blogId=this.router.snapshot.params['id'];
+    this.postsservice.get(blogId).subscribe((data:any) => {
       this.editForm = this.fb.group({
-        id: [this.post[0].id, Validators.required],
-        title: [this.title, Validators.required],
-        content: [this.content, Validators.required],
+        _id: [data._id, Validators.required],
+        title: [data.title, Validators.required],
+        content: [data.content, Validators.required],
       })
     })
     

@@ -9,18 +9,20 @@
         </div>
         <div>
             <p style="font-size: medium; font-weight: bolder">{{userName}}</p>
-            <textarea name="Comment" class="comment" placeholder="Comment" formControlName="comment"></textarea>
+            <div>
+                <textarea name="Comment" class="comment" placeholder="Comment" formControlName="comment"></textarea>
+            </div>
         </div>
-        <!-- <div><button class="submit" (click)="submit()">Submit</button></div>
+        <div><button class="submit" (click)="submit()">Submit</button></div>
         <br>
         <div *ngFor="let comment of comments" class="commentsbox">
             <div class="comments">
-                <p>{{comment.create_by}} &nbsp;&nbsp;{{comment.modified_date}}</p>
-                <p>{{comment.description}}</p>
+                <p>{{comment.comments}}</p>
+                
                 
             </div>
-            <button (click)="delete(comment.id)" class="delete">Delete</button>
-        </div> -->
+            <button (click)="delete(comment._id)" class="delete">Delete</button>
+        </div>
         
     </div>
 </div>

@@ -30,8 +30,9 @@ export class PostsService {
   }
   edit(post:any) {
     const postJson = JSON.stringify(post);
+    console.log(post.id);
     console.log("this is post" + postJson);
-    this.httpClient.put('http://localhost:3030/blog', postJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
+    this.httpClient.put('http://localhost:3030/blog/'+post._id, postJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
       console.log(data);
     });
   }

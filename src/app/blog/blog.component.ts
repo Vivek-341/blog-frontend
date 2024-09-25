@@ -22,13 +22,11 @@ interface post {
 })
 export class BlogComponent {
   posts: post[] = [];
-  constructor(private postsService: PostsService) {}
+  constructor(private postsService: PostsService) { }
 
   ngOnInit() {
     this.postsService.getAll().subscribe((data:any) => {
       this.posts = data;
-      console.log(this.posts);
-      console.log(data[0]._id);
     })
   }
   
@@ -39,7 +37,7 @@ export class BlogComponent {
   }
 
   edit(post: post) {
-    // console.log(post);  
+    console.log(post._id);  
   }
   
 

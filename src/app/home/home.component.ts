@@ -11,19 +11,16 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  
+  userName = localStorage.getItem('userName')?? '';
   constructor(){
    let userName = localStorage.getItem('userName')?? '';
-    console.log("I am home component constructor" + userName);
   }
 
   ngOnInit(){
     let userName = localStorage.getItem('userName')?? '';
-     console.log("I am home component ngOnInit" + userName);
    }
    ngViewInit(){
     let userName = localStorage.getItem('userName')?? '';
-     console.log("I am home component ngViewInit" + userName);
    }
 
 }
