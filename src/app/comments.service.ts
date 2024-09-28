@@ -8,15 +8,15 @@ export class CommentsService {
   comments: any[] = [];
   constructor(private httpClient: HttpClient) { }
   getall(blogId: any) {
-    return this.httpClient.get('http://localhost:3030/thread/' + blogId);
+    return this.httpClient.get('https://blog-mongodb-lac.vercel.app//thread/' + blogId);
   }
 
   add(comment: any) {
-    return this.httpClient.post('http://localhost:3030/thread', comment);
+    return this.httpClient.post('https://blog-mongodb-lac.vercel.app//thread', comment);
   }
 
   delete(id: any) {
     console.log("this is id" + id);
-    return this.httpClient.delete('http://localhost:3030/thread/' + id);
+    return this.httpClient.delete('https://blog-mongodb-lac.vercel.app//thread/' + id);
   }
 }
