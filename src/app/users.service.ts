@@ -19,7 +19,7 @@ export class UsersService {
 
   add(user:any ) {
     const userJson = JSON.stringify(user);
-    this.httpClient.post('https://blog-mongodb-lac.vercel.app//user', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
+    this.httpClient.post('https://blog-mongodb-lac.vercel.app/user', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
     });
   }
   

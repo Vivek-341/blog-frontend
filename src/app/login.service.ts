@@ -11,11 +11,11 @@ export class LoginService {
 
   login(user:any ) {
     const userJson = JSON.stringify(user);
-    // this.httpClient.post('https://blog-mongodb-lac.vercel.app//login', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
+    // this.httpClient.post('https://blog-mongodb-lac.vercel.app/login', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})}).subscribe((data:any) => {
     //   console.log(data);
     //   console.log(data[0].name)
     //   localStorage.setItem("userName",data[0].name);
     // });
-    return this.httpClient.post('https://blog-mongodb-lac.vercel.app//login', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})});
+    return this.httpClient.post('https://blog-mongodb-lac.vercel.app/login', userJson, {headers: new HttpHeaders({'Content-Type': 'application/json'})});
   }
 }
