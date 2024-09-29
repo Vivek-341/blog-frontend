@@ -9,8 +9,8 @@
         </div>
         <div>
             <p style="font-size: medium; font-weight: bolder">{{userName}}</p>
-            <div>
-                <textarea name="Comment" class="comment" placeholder="Comment" formControlName="comment"></textarea>
+            <div [formGroup]="commentForm">
+                <textarea name="Comment" class="comment" placeholder="Comment" formControlName="comments"></textarea>
             </div>
         </div>
         <div><button class="submit" (click)="submit()">Submit</button></div>

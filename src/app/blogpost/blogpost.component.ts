@@ -42,6 +42,7 @@ export class BlogpostComponent {
   })
 
   commentForm = this.fb.group({
+    blogId: [this.router.snapshot.params['id'], Validators.required],
     comments: ['', Validators.required]
   })
   
@@ -82,7 +83,8 @@ export class BlogpostComponent {
   }
 
   submit(){
-
+    console.log(this.commentForm.value);
+    this.commentservice.add(this.commentForm.value)
   }
 
   delete(id:any){
