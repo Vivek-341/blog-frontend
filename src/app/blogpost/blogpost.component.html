@@ -18,8 +18,6 @@
         <div *ngFor="let comment of comments" class="commentsbox">
             <div class="comments">
                 <p>{{comment.comments}}</p>
-                
-                
             </div>
             <button (click)="delete(comment._id)" class="delete">Delete</button>
         </div>

@@ -12,7 +12,7 @@ export class CommentsService {
   }
 
   add(comment: any) {
-    return this.httpClient.post('http://localhost:3030/thread', comment).subscribe((data: any) => {
+    return this.httpClient.post('https://blog-mongodb-lac.vercel.app/thread', comment).subscribe((data: any) => {
       console.log(data);
     });
   }
