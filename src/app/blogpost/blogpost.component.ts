@@ -83,15 +83,17 @@ export class BlogpostComponent {
   }
 
   submit(){
+    alert("Thread added successfully.Refresh to see changes");
     console.log(this.commentForm.value);
-    this.commentservice.add(this.commentForm.value)
+    this.commentservice.add(this.commentForm.value);
+    this.ngOnInit();
   }
 
   delete(id:any){
+    alert("Thread deleted successfully.Refresh to see changes");
     console.log(id);
-    this.commentservice.delete(id).subscribe((data:any) => {
-      console.log(data);
-    });
+    this.commentservice.delete(id).subscribe();
+    this.ngOnInit();
   }
   
 }
